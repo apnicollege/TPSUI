@@ -8,7 +8,6 @@
 </head>
 <body>
 <h1>Home</h1>
-
 <a href="${pageContext.request.contextPath }/ticket"> Tickets </a>
 </body>
 </html>
