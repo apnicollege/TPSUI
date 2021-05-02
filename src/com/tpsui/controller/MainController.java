@@ -24,9 +24,7 @@ public class MainController {
 	public String showTicket() {
 		//fetch data from service 
 		List<Ticket> list = this.ticketService.getAllTickets();
-		for(Ticket t : list) {
-			System.out.println(t);
-		}
+		 
 		return "ticket";
 	}
 }
