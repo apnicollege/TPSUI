@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.tpsui.beans.Ticket;
@@ -21,10 +22,11 @@ public class MainController {
 	}
 	
 	@RequestMapping("/ticket")
-	public String showTicket() {
+	public String showTicket(Model model) {
 		//fetch data from service 
 		List<Ticket> list = this.ticketService.getAllTickets();
-		 
+		 //transferring the data from controller to view(jsp)
+		model.addAttribute("list", list);
 		return "ticket";
 	}
 }
