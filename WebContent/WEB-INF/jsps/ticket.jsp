@@ -4,6 +4,8 @@
  <%@ page import="java.time.LocalDate" %>   
  <%@ page import="java.util.List" %> 
  <%@ page import="com.tpsui.beans.Ticket" %> 
+ 
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,11 +25,11 @@ Output= <%=x+y %>
 <%= LocalDate.now() %>
 <%-- JSP Comment --%>
 <hr>
-<% 
-	List<Ticket> list = (List<Ticket>) request.getAttribute("list");
-%>
-<%=list %>
 
+<%-- JSTL: JSP Std Tag Library : EL--%>
+<c:forEach items="${list }" var="t">
+	<c:out value="${t.description }"></c:out> <BR>
+</c:forEach>
 </body>
 </html>
 
