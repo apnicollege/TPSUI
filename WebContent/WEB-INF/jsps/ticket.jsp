@@ -1,11 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <!-- import tag -->
- <%@ page import="java.time.LocalDate" %>   
- <%@ page import="java.util.List" %> 
- <%@ page import="com.tpsui.beans.Ticket" %> 
- 
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,23 +9,26 @@
 <title>Insert title here</title>
 </head>
 <body>
+<c:import url="header.jsp" />
 <h1>Ticket</h1>
-<!--  Scriptlet -->
-<% 
-	int x=5;
-	int y=6;
-	
-%>
-<!--  expression tag -->
-Output= <%=x+y %>
-<%= LocalDate.now() %>
-<%-- JSP Comment --%>
-<hr>
-
+ 
+ 
+ 
 <%-- JSTL: JSP Std Tag Library : EL--%>
 <c:forEach items="${list }" var="t">
 	<c:out value="${t.description }"></c:out> <BR>
 </c:forEach>
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<c:import url="footer.jsp" />
 </body>
 </html>
 
