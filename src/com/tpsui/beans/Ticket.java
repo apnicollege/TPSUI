@@ -7,6 +7,10 @@ public class Ticket {
 	private String createdDate;
 	private String actionTaken;
 	private String status;
+	
+	private Executive executive;
+	private Customer customer;
+	
 	public Long getId() {
 		return id;
 	}
@@ -37,11 +41,24 @@ public class Ticket {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	public Executive getExecutive() {
+		return executive;
+	}
+	public void setExecutive(Executive executive) {
+		this.executive = executive;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
 	@Override
 	public String toString() {
 		return "Ticket [id=" + id + ", description=" + description + ", createdDate=" + createdDate + ", actionTaken="
-				+ actionTaken + ", status=" + status + "]";
+				+ actionTaken + ", status=" + status + ", executive=" + executive + ", customer=" + customer + "]";
 	}
+	 
 	
 	
 }

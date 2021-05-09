@@ -9,8 +9,7 @@
    		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
    		   		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.semanticui.min.css">
    		
-     <style> #thead>tr>th{ color: white; } </style>
-
+ </head>
  
  <body>
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,5 +45,4 @@
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.semanticui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
- </head>
-</html>
+ </html>
